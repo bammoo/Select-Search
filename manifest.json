@@ -13,6 +13,9 @@
             "selectsearch.js",
             "common.js"
          ],
+         "exclude_matches": [
+            "*://app.diagrams.net*"
+         ],
          "matches": [
             "\u003Call_urls>"
          ]
