@@ -304,6 +304,10 @@ var searchSelectBaloon = {
   },
 
   getSelText: function (e) {
+    const blackSite =
+      ["app.diagrams.net", "dbdiagram.io"].indexOf(location.host) > -1;
+    if (blackSite) return;
+
     if (searchSelectBaloon.isHover) return;
     var txt = document.getSelection().toString(); // To prevent any change of getSelection
     if (txt != "" && txt != "\n" && txt != "\t" && txt.length < 600) {
