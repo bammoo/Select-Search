@@ -72,6 +72,8 @@ var EventCache = (function () {
   };
 })();
 
+let enable = true;
+
 var searchSelectBaloon = {
   x: 0,
   y: 0,
@@ -304,6 +306,7 @@ var searchSelectBaloon = {
   },
 
   getSelText: function (e) {
+    if (!enable) return;
     const blackSite =
       ["app.diagrams.net", "dbdiagram.io"].indexOf(location.host) > -1;
     if (blackSite) return;
@@ -379,6 +382,13 @@ addEvent(window, "unload", EventCache.flush);
 addEvent(document, "mouseup", searchSelectBaloon.getSelText);
 //addEvent(document,'mousedown',searchSelectBaloon.mouseDown);
 addEvent(document, "keydown", searchSelectBaloon.keyPress);
+
+addEvent(document, "keyup", function (e) {
+  if (e.composed && e.altKey && e.code === "KeyZ") {
+    console.log(`xjf: toggle select search now`);
+    enable = !enable;
+  }
+});
 
 /*
 //Injection of js in the user space
