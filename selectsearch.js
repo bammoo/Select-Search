@@ -72,7 +72,7 @@ var EventCache = (function () {
   };
 })();
 
-let enable = true;
+let enable = false;
 
 var searchSelectBaloon = {
   x: 0,
