@@ -73,6 +73,7 @@ var EventCache = (function () {
 })();
 
 let enable = false;
+let theLastMouseupEvent;
 
 var searchSelectBaloon = {
   x: 0,
@@ -305,7 +306,10 @@ var searchSelectBaloon = {
     }
   },
 
-  getSelText: function (e) {
+  getSelText: function (e, isTriggerFromHotkey = false) {
+    if (!isTriggerFromHotkey) {
+      theLastMouseupEvent = e;
+    }
     if (!enable) return;
     const blackSite =
       ["app.diagrams.net", "dbdiagram.io"].indexOf(location.host) > -1;
@@ -387,6 +391,13 @@ addEvent(document, "keyup", function (e) {
   if (e.composed && e.altKey && e.code === "KeyZ") {
     console.log(`xjf: toggle select search now`);
     enable = !enable;
+    // do at once when hotkey triggered
+    if (enable && theLastMouseupEvent) {
+      searchSelectBaloon.getSelText(
+        theLastMouseupEvent,
+        /* isTriggerFromHotkey */ true
+      );
+    }
   }
 });
 
