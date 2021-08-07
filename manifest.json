@@ -8,14 +8,14 @@
             "selectsearch.css"
          ],
          "js": [
-            "jquery-1.8.1.min.js",
-            "jquery-ui-1.8.23.custom.min.js",
+            "vendors/jquery-1.8.1.min.js",
+            "vendors/jquery-ui-1.8.23.custom.min.js",
             "selectsearch.js",
             "common.js"
          ],
-         "exclude_matches": [
-            "*://app.diagrams.net*"
-         ],
+         // "exclude_matches": [
+         //    "*://app.diagrams.net*"
+         // ],
          "matches": [
             "\u003Call_urls>"
          ]
@@ -23,9 +23,9 @@
    ],
    "description": "Offers to make a quick search in google or other websites using the selected text.",
    "icons": {
-      "128": "ico128.png",
-      "32": "ico32.png",
-      "48": "ico48.png"
+      "128": "icons/ico128.png",
+      "32": "icons/ico32.png",
+      "48": "icons/ico48.png"
    },
    "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDhAsOy7rGWRR7mgVE3hNa+syMq033W4a8Q2qWYncHFtpNcvQ8AzPAQGdj1XFB27DMThLu1ix+tuX6ij9Wroq2lZh9u23G7vKEVB+/ioxK6T0M9yMwYzvqi4IXrXHYkCnUNLdeC+2ovsLV7icmlpUBQKaX30lSLgoz48YG/vR6mQQIDAQAB",
    "manifest_version": 2,
@@ -39,23 +39,23 @@
    "update_url": "http://clients2.google.com/service/update2/crx",
    "version": "1.5.20",
    "web_accessible_resources": [
-      "Google-img-ico.png",
-      "GoogleTranslate.png",
-      "binsearch.png",
-      "cp.png",
-      "ebay.png",
-      "facebook.png",
-      "flickr.png",
-      "geograph.png",
-      "gmap.png",
-      "google-chrome-ico.png",
-      "google-ico.png",
-      "baidu-ico.png",
-      "link.png",
-      "nzbnl.png",
-      "twitter.png",
-      "wikipedia-ico.png",
-      "youtube.png",
+      "images/Google-img-ico.png",
+      "images/GoogleTranslate.png",
+      "images/binsearch.png",
+      "images/cp.png",
+      "images/ebay.png",
+      "images/facebook.png",
+      "images/flickr.png",
+      "images/geograph.png",
+      "images/gmap.png",
+      "images/google-chrome-ico.png",
+      "images/google-ico.png",
+      "images/baidu-ico.png",
+      "images/link.png",
+      "images/nzbnl.png",
+      "images/twitter.png",
+      "images/wikipedia-ico.png",
+      "images/youtube.png",
       "common.js",
       "selectsearch.js",
       "selectsearch.css",
