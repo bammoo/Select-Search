@@ -72,7 +72,7 @@ var EventCache = (function () {
   };
 })();
 
-let enable = false;
+let enable = true;
 let theLastMouseupEvent;
 
 var searchSelectBaloon = {
