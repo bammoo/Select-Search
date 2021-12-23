@@ -10,6 +10,13 @@ myLinks = [
     defaultLocale: "com",
   },
   {
+    id: "baidu",
+    dest: "http://www.baidu.com/s?wd=" + text,
+    title: "Baidu search: " + textb,
+    img: '<img src="' + chrome.extension.getURL("images/baidu-ico.png") + '">',
+    defaut: "true",
+  },
+  {
     id: "googleimg",
     dest: "http://www.google.<<googleimgLocale>>/images?q=" + text,
     title: "Google Image search: " + textb,
@@ -17,7 +24,7 @@ myLinks = [
       '<img src="' +
       chrome.extension.getURL("images/Google-img-ico.png") +
       '">',
-    defaut: "true",
+    defaut: "false",
     defaultLocale: "com",
   },
   {
@@ -27,7 +34,7 @@ myLinks = [
     title: "Wikipedia search: " + textb,
     img:
       '<img src="' + chrome.extension.getURL("images/wikipedia-ico.png") + '">',
-    defaut: "true",
+    defaut: "false",
     defaultLocale: "en",
   },
   {
@@ -35,7 +42,7 @@ myLinks = [
     dest: "http://search.twitter.com/search?q=" + text,
     title: "Twitter search: " + textb,
     img: '<img src="' + chrome.extension.getURL("images/twitter.png") + '">',
-    defaut: "true",
+    defaut: "false",
   },
   {
     id: "binsearch",
@@ -168,13 +175,6 @@ myLinks = [
     img: '<img src="<<20img>>"/>',
     defaut: "false",
     custom: "true",
-  },
-  {
-    id: "baidu",
-    dest: "http://www.baidu.com/s?wd=" + text,
-    title: "Baidu search: " + textb,
-    img: '<img src="' + chrome.extension.getURL("images/baidu-ico.png") + '">',
-    defaut: "false",
   },
   {
     id: "22",
